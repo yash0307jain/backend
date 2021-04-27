@@ -1,38 +1,38 @@
 import { Document, Schema, Model, model, HookNextFunction } from "mongoose";
 import bcrypt from "bcrypt";
 
-interface IUser extends Document{
-    firstName: string,
-    lastName: string,
-    email: string,
-    phone: string,
-    password: string
+interface IUser extends Document {
+    firstName: string;
+    lastName: string;
+    email: string;
+    phone: string;
+    password: string;
 }
 
 const UserSchema: Schema = new Schema({
     firstName: {
         type: String,
-        required: true
+        required: true,
     },
     lastName: {
         type: String,
-        required: true
+        required: true,
     },
     email: {
         type: String,
-        required: true
+        required: true,
     },
     phone: {
         type: String,
-        required: true
+        required: true,
     },
     password: {
         type: String,
-        required: true
-    }
+        required: true,
+    },
 });
 
-UserSchema.pre<IUser>("save", function(next: HookNextFunction){
+UserSchema.pre<IUser>("save", function (next: HookNextFunction) {
     this.password = bcrypt.hashSync(this.password, 10);
     next();
 });

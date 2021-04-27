@@ -1,0 +1,3 @@
+{"time":"27/3/2021  23:55:34","methodName":"startFile","message":"Express config done"}
+{"time":"27/3/2021  23:55:34","methodName":"startFile","message":"Routes config done"}
+{"time":"27/3/2021  23:55:34","methodName":"startFile","message":"Server running successfully"}
