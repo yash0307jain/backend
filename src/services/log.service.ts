@@ -10,7 +10,7 @@ export default class LogService {
         const logDate: string =
             dateTime.getDate() +
             "/" +
-            dateTime.getMonth() +
+            (dateTime.getMonth() + 1) +
             "/" +
             dateTime.getFullYear();
         const logTime: string =
