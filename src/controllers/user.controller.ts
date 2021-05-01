@@ -16,9 +16,9 @@ export class UserController {
         const _user: IUser = {
             firstName: req.body.firstName,
             lastName: req.body.lastName,
-            email: req.body.email as string,
+            email: req.body.email,
             phone: req.body.phone,
-            password: req.body.password as string,
+            password: req.body.password
         };
         const userInfo: {
             user: IUser;

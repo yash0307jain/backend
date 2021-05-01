@@ -4,6 +4,9 @@ export interface IUser {
     email: string;
     phone: string;
     password: string;
+    profilePic?: string | null;
+    userType?: string;
+    dateTime?: Date;
 }
 
 export interface ISignIn {
